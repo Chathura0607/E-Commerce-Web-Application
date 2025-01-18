@@ -279,31 +279,25 @@
 
     <div id="login-form" class="form-box Login">
         <h2>Login</h2>
-        <form onsubmit="handleLogin(event)">
+        <form action="user-login" method="post">
             <div class="input-box">
                 <input type="email" id="login-email" name="email" required />
                 <label for="login-email">Email</label>
             </div>
             <div class="input-box">
-                <input
-                        type="password"
-                        id="login-password"
-                        name="password"
-                        required
-                />
+                <input type="password" id="login-password" name="password" required />
                 <label for="login-password">Password</label>
             </div>
             <button type="submit" class="btn">Login</button>
             <p class="regi-link">
-                Don't have an account?
-                <a href="#" onclick="showRegister()">Register</a>
+                Don't have an account? <a href="#" onclick="showRegister()">Register</a>
             </p>
         </form>
     </div>
 
     <div id="register-form" class="form-box Register">
         <h2>Register</h2>
-        <form onsubmit="handleRegister(event)">
+        <form action="user-register" method="post">
             <div class="input-box">
                 <input type="text" id="register-name" name="name" required />
                 <label for="register-name">Full Name</label>
@@ -313,12 +307,7 @@
                 <label for="register-email">Email</label>
             </div>
             <div class="input-box">
-                <input
-                        type="password"
-                        id="register-password"
-                        name="password"
-                        required
-                />
+                <input type="password" id="register-password" name="password" required />
                 <label for="register-password">Password</label>
             </div>
 
@@ -340,6 +329,18 @@
     </div>
 </div>
 
+<%-- Check if there is a message set by the servlet and display an alert --%>
+<%
+    String message = (String) request.getAttribute("message");
+    if (message != null) {
+%>
+<script type="text/javascript">
+    alert("<%= message %>");
+</script>
+<%
+    }
+%>
+
 <script>
     function showRegister() {
         const container = document.querySelector(".container");
@@ -353,16 +354,6 @@
         const body = document.body;
         container.classList.remove("active");
         body.style.backgroundColor = "#28a745";
-    }
-
-    function handleLogin(event) {
-        event.preventDefault();
-        alert("Login form submitted");
-    }
-
-    function handleRegister(event) {
-        event.preventDefault();
-        alert("Register form submitted");
     }
 </script>
 </body>
