@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lk.ijse.ecommercewebapplication.dto.UserDTO;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -31,23 +32,33 @@ public class RegisterServlet extends HttpServlet {
         String role = req.getParameter("role");
         String status = req.getParameter("status");
 
+        UserDTO userDTO = new UserDTO();
+        userDTO.setName(name);
+        userDTO.setEmail(email);
+        userDTO.setPassword(password);
+        userDTO.setRole(role);
+        userDTO.setStatus(status);
+
         // Hash the password
-        String hashedPassword = hashPassword(password);
+        String hashedPassword = hashPassword(userDTO.getPassword());
         if (hashedPassword == null) {
             req.setAttribute("message", "Failed to hash the password. Please try again.");
             req.getRequestDispatcher("index.jsp").forward(req, resp);
             return;
         }
 
+        // Set the hashed password back into the UserDTO
+        userDTO.setPassword(hashedPassword);
+
         try (Connection connection = dataSource.getConnection()) {
             // SQL query to insert a new user into the database
             String sql = "INSERT INTO users (name, email, password, role, status) VALUES (?, ?, ?, ?, ?)";
             try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-                preparedStatement.setString(1, name);
-                preparedStatement.setString(2, email);
-                preparedStatement.setString(3, hashedPassword);
-                preparedStatement.setString(4, role);
-                preparedStatement.setString(5, status);
+                preparedStatement.setString(1, userDTO.getName());
+                preparedStatement.setString(2, userDTO.getEmail());
+                preparedStatement.setString(3, userDTO.getPassword());
+                preparedStatement.setString(4, userDTO.getRole());
+                preparedStatement.setString(5, userDTO.getStatus());
 
                 // Execute the query
                 int rowsAffected = preparedStatement.executeUpdate();
