@@ -1,3 +1,10 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: chath
+  Date: 1/22/2025
+  Time: 8:43 AM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
@@ -13,7 +20,7 @@
 
     <div id="login-form" class="form-box Login">
         <h2>Login</h2>
-        <form action="user-login" method="post">
+        <form action="admin-login" method="post">
             <div class="input-box">
                 <input type="email" id="login-email" name="email" required />
                 <label for="login-email">Email</label>
@@ -31,7 +38,7 @@
 
     <div id="register-form" class="form-box Register">
         <h2>Register</h2>
-        <form action="user-register" method="post">
+        <form action="admin-register" method="post">
             <div class="input-box">
                 <input type="text" id="register-name" name="name" required />
                 <label for="register-name">Full Name</label>
@@ -45,7 +52,13 @@
                 <label for="register-password">Password</label>
             </div>
 
-            <input type="hidden" name="role" value="Customer" />
+            <div class="input-box">
+                <select id="register-role" name="role" required>
+                    <option value="Customer" selected>Customer</option>
+                    <option value="Admin">Admin</option>
+                </select>
+                <label for="register-role">Role</label>
+            </div>
 
             <input type="hidden" name="status" value="Active" />
 

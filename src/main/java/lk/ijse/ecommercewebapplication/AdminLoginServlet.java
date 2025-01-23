@@ -18,8 +18,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Base64;
 
-@WebServlet(name = "CustomerLoginServlet", value = "/user-login")
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "AdminLoginServlet", value = "/admin-login")
+public class AdminLoginServlet extends HttpServlet {
 
     @Resource(name = "java:comp/env/jdbc/pool")
     private DataSource dataSource;
@@ -49,37 +49,36 @@ public class LoginServlet extends HttpServlet {
                         String role = resultSet.getString("role");
 
                         if (storedPassword.equals(hashedPassword)) {
-                            if (!"Customer".equalsIgnoreCase(role)) {
-                                req.setAttribute("message", "Login Failed! Only customers are allowed to log in.");
-                                req.getRequestDispatcher("index.jsp").forward(req, resp);
-                                return;
-                            }
-
                             if ("Active".equalsIgnoreCase(status)) {
                                 userDTO.setName(resultSet.getString("name"));
                                 userDTO.setRole(role);
                                 req.getSession().setAttribute("user", userDTO);
 
-                                req.setAttribute("message", "Login Success! Welcome, Customer.");
-                                req.getRequestDispatcher("products.jsp").forward(req, resp);
+                                if ("Admin".equalsIgnoreCase(role)) {
+                                    req.setAttribute("message", "Login Success! Welcome, Admin.");
+                                    req.getRequestDispatcher("categoryManage.jsp").forward(req, resp);
+                                } else if ("Customer".equalsIgnoreCase(role)) {
+                                    req.setAttribute("message", "Login Success! Welcome, Customer.");
+                                    req.getRequestDispatcher("products.jsp").forward(req, resp);
+                                }
                             } else {
                                 req.setAttribute("message", "Login Failed! Your account is not active.");
-                                req.getRequestDispatcher("index.jsp").forward(req, resp);
+                                req.getRequestDispatcher("admin.jsp").forward(req, resp);
                             }
                         } else {
                             req.setAttribute("message", "Login Failed! Incorrect password.");
-                            req.getRequestDispatcher("index.jsp").forward(req, resp);
+                            req.getRequestDispatcher("admin.jsp").forward(req, resp);
                         }
                     } else {
                         req.setAttribute("message", "Login Failed! Email not found.");
-                        req.getRequestDispatcher("index.jsp").forward(req, resp);
+                        req.getRequestDispatcher("admin.jsp").forward(req, resp);
                     }
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
             req.setAttribute("message", "An error occurred: " + e.getMessage());
-            req.getRequestDispatcher("index.jsp").forward(req, resp);
+            req.getRequestDispatcher("admin.jsp").forward(req, resp);
         }
     }
 
@@ -94,4 +93,3 @@ public class LoginServlet extends HttpServlet {
         }
     }
 }
-
