@@ -217,7 +217,7 @@
 
 <!-- Shopping Cart Content -->
 <div class="container mb-5">
-    <h2 class="mb-4 mt-5" >Your Shopping Cart</h2>
+    <h2 class="mb-4 mt-5">Your Shopping Cart</h2>
     <div class="row">
         <!-- Example Product Card -->
         <div class="col-md-4">

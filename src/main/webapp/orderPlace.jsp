@@ -223,7 +223,8 @@
             <form>
                 <div class="mb-3">
                     <label for="address" class="form-label">Shipping Address</label>
-                    <textarea class="form-control" id="address" rows="3" placeholder="Enter your shipping address"></textarea>
+                    <textarea class="form-control" id="address" rows="3"
+                              placeholder="Enter your shipping address"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="payment" class="form-label">Payment Method</label>

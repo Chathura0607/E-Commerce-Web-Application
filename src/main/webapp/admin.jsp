@@ -8,8 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>E-commerce Login & Registration</title>
     <link href="styles/login.css" type="text/css" rel="stylesheet">
 </head>
@@ -22,11 +22,11 @@
         <h2>Login</h2>
         <form action="admin-login" method="post">
             <div class="input-box">
-                <input type="email" id="login-email" name="email" required />
+                <input type="email" id="login-email" name="email" required/>
                 <label for="login-email">Email</label>
             </div>
             <div class="input-box">
-                <input type="password" id="login-password" name="password" required />
+                <input type="password" id="login-password" name="password" required/>
                 <label for="login-password">Password</label>
             </div>
             <button type="submit" class="btn">Login</button>
@@ -40,15 +40,15 @@
         <h2>Register</h2>
         <form action="admin-register" method="post">
             <div class="input-box">
-                <input type="text" id="register-name" name="name" required />
+                <input type="text" id="register-name" name="name" required/>
                 <label for="register-name">Full Name</label>
             </div>
             <div class="input-box">
-                <input type="email" id="register-email" name="email" required />
+                <input type="email" id="register-email" name="email" required/>
                 <label for="register-email">Email</label>
             </div>
             <div class="input-box">
-                <input type="password" id="register-password" name="password" required />
+                <input type="password" id="register-password" name="password" required/>
                 <label for="register-password">Password</label>
             </div>
 
@@ -60,7 +60,7 @@
                 <label for="register-role">Role</label>
             </div>
 
-            <input type="hidden" name="status" value="Active" />
+            <input type="hidden" name="status" value="Active"/>
 
             <button type="submit" class="btn">Register</button>
             <p class="regi-link">

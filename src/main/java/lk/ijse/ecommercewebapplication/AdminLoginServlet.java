@@ -56,7 +56,7 @@ public class AdminLoginServlet extends HttpServlet {
 
                                 if ("Admin".equalsIgnoreCase(role)) {
                                     req.setAttribute("message", "Login Success! Welcome, Admin.");
-                                    req.getRequestDispatcher("categoryManage.jsp").forward(req, resp);
+                                    req.getRequestDispatcher("category-manage").forward(req, resp);
                                 } else if ("Customer".equalsIgnoreCase(role)) {
                                     req.setAttribute("message", "Login Success! Welcome, Customer.");
                                     req.getRequestDispatcher("products.jsp").forward(req, resp);

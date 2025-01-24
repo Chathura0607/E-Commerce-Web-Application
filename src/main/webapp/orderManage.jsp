@@ -8,8 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Product Management</title>
     <link
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -33,15 +33,22 @@
 <div class="content">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleSidebar()">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                    onclick="toggleSidebar()">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav d-flex justify-content-between w-100">
-                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/product-manage">Product Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/category-manage">Category Management</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="${pageContext.request.contextPath}/order-manage">Order Management</a></li>
-                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/user-manage">User Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/product-manage">Product
+                        Management</a></li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/category-manage">Category
+                        Management</a></li>
+                    <li class="nav-item"><a class="nav-link active"
+                                            href="${pageContext.request.contextPath}/order-manage">Order Management</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/user-manage">User
+                        Management</a></li>
                 </ul>
             </div>
         </div>
