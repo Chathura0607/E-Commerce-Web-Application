@@ -40,6 +40,11 @@ body {
     transition: margin-left 0.3s ease;
 }
 
+.logout {
+    width: 200px;
+    margin-top: 50px;
+}
+
 @media (max-width: 768px) {
     .sidebar {
         display: none;

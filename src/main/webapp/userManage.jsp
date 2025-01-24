@@ -18,6 +18,12 @@
         <li><a href="${pageContext.request.contextPath}/category-manage">Category Management</a></li>
         <li><a href="${pageContext.request.contextPath}/order-manage">Order Management</a></li>
         <li><a href="${pageContext.request.contextPath}/user-manage">User Management</a></li>
+        <li class="d-flex align-items-center justify-content-center">
+            <!-- Logout Button -->
+            <form action="${pageContext.request.contextPath}/logout" method="post" class="d-flex">
+                <button type="submit" class="btn btn-outline-light logout">Logout</button>
+            </form>
+        </li>
     </ul>
 </div>
 
