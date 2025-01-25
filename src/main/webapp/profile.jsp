@@ -1,4 +1,4 @@
-<%--
+<%@ page import="lk.ijse.ecommercewebapplication.dto.UserDTO" %><%--
   Created by IntelliJ IDEA.
   User: chath
   Date: 1/21/2025
@@ -158,27 +158,53 @@
         </div>
     </div>
 </nav>
+<%
+    String alertMessage = (String) request.getAttribute("alertMessage");
+    if (alertMessage != null) {
+%>
+<script type="text/javascript">
+    alert("<%= alertMessage %>");
+</script>
+<%
+    }
+%>
+
+<%
+    lk.ijse.ecommercewebapplication.dto.UserDTO user = (lk.ijse.ecommercewebapplication.dto.UserDTO) session.getAttribute("user");
+    if (user == null) {
+%>
+<!-- If user is null, redirect to login or show an error -->
+<p>Session expired. Please <a href="index.jsp">log in</a>.</p>
+<%
+} else {
+%>
+
 <div class="container mb-5">
     <h2 class="mb-4 mt-5">Profile Management</h2>
-    <form>
+    <form action="profile" method="post">
         <div class="mb-3">
             <label for="profile-name" class="form-label">Full Name</label>
-            <input type="text" class="form-control" id="profile-name" value="John Doe">
+            <input type="text" class="form-control" id="profile-name" name="name" value="<%= user.getName() %>"
+                   required>
         </div>
         <div class="mb-3">
             <label for="profile-email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="profile-email" value="john.doe@example.com">
+            <input type="email" class="form-control" id="profile-email" name="email" value="<%= user.getEmail() %>"
+                   required>
         </div>
         <div class="mb-3">
             <label for="profile-password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="profile-password">
+            <input type="password" class="form-control" id="profile-password" name="password" required>
         </div>
         <div class="mb-3">
             <label for="confirm-password" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirm-password">
+            <input type="password" class="form-control" id="confirm-password" name="confirmPassword" required>
         </div>
         <button type="submit" class="btn btn-primary">Update Profile</button>
     </form>
+    <%
+        }
+    %>
 </div>
 <footer>
     <p>&copy; 2025 E-Commerce Store. All Rights Reserved.</p>

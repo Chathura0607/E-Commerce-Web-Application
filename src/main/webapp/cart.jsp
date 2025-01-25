@@ -208,7 +208,7 @@
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="cart.jsp">Cart</a></li>
-                <li class="nav-item"><a class="nav-link" href="user_profile.jsp">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="profile.jsp">Profile</a></li>
             </ul>
             <button type="button" class="btn btn-primary btn-lg">Logout</button>
         </div>
