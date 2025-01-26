@@ -44,10 +44,10 @@ An elegant and user-friendly E-Commerce platform built using **JSP**, **CSS**, *
 ### 🏠 Customer Login  
 ![Image](https://github.com/user-attachments/assets/ca86f864-d17b-4321-89f8-7cb458634677)  
 
-### 🛍️ Customer Register  
+### 🧑‍💻 Customer Register  
 ![Image](https://github.com/user-attachments/assets/ed8d4a00-408d-40b7-9e13-5704465346e1)
 
-### 🛒 Admin Register  
+### 🛠️ Admin Register  
 ![Image](https://github.com/user-attachments/assets/42de369b-4d65-4733-acc8-1c79be50c34f)
 
 ### ⚙️ Admin Panel  
