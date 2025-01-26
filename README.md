@@ -51,7 +51,7 @@ An elegant and user-friendly E-Commerce platform built using **JSP**, **CSS**, *
 ![Image](https://github.com/user-attachments/assets/42de369b-4d65-4733-acc8-1c79be50c34f)
 
 ### ⚙️ Admin Panel  
-![Admin Panel](path/to/adminpanel_screenshot.png)  
+![Image](https://github.com/user-attachments/assets/98f41484-409c-4433-9bad-66db0d646f67)
 
 > **Note:** Replace `path/to/...` with actual file paths or URLs of your images.  
 
