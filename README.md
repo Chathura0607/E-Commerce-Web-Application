@@ -55,6 +55,10 @@ An elegant and user-friendly E-Commerce platform built using **JSP**, **CSS**, *
 
 ![Image](https://github.com/user-attachments/assets/9bee84a6-6596-4ebc-99f0-306009bd6ad6)
 
+![Image](https://github.com/user-attachments/assets/89d97b30-c852-48d5-8b70-a874633518c9)
+
+### 🛒 Customer Panel  
+
 ---
 
 ## 🎥 Demonstration Video  
