@@ -144,6 +144,9 @@ Watch a full walkthrough of the application on [YouTube](https://www.youtube.com
 
 ---
 
-## 📄 License  
+## 📬 Contact
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
+Have questions or suggestions? Feel free to reach out:
+
+📧 **Email**: [chathuhiru45@gmail.com](mailto:chathuhiru@gmail.com)  
+🐙 **GitHub**: [Chathura0607](https://github.com/Chathura0607)  
