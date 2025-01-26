@@ -181,16 +181,15 @@
     </style>
 </head>
 <body>
-<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.jsp">E-Commerce</a>
+        <a class="navbar-brand" href="products.jsp">E-Commerce</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link active" href="product_list.jsp">Shop</a></li>
+                <li class="nav-item"><a class="nav-link active" href="products.jsp">Shop</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" data-bs-toggle="dropdown">
                         Categories
@@ -204,7 +203,7 @@
             </ul>
             <form class="d-flex me-2">
                 <input class="form-control me-2" type="search" placeholder="Search for products..." aria-label="Search">
-                <button class="btn btn-outline-danger" type="submit">Search</button>
+                <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="cart.jsp">Cart</a></li>

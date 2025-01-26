@@ -39,7 +39,7 @@ public class ProfileManageServlet extends HttpServlet {
         if (currentUser == null) {
             alertMessage = "You must be logged in to update your profile.";
             req.setAttribute("alertMessage", alertMessage);
-            req.getRequestDispatcher("profile.jsp").forward(req, resp);
+            req.getRequestDispatcher("index.jsp").forward(req, resp);
             return;
         }
 

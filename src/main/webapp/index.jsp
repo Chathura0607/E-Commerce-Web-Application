@@ -57,13 +57,12 @@
     </div>
 </div>
 
-<%-- Check if there is a message set by the servlet and display an alert --%>
 <%
-    String message = (String) request.getAttribute("message");
-    if (message != null) {
+    String alertMessage = (String) request.getAttribute("alertMessage");
+    if (alertMessage != null) {
 %>
 <script type="text/javascript">
-    alert("<%= message %>");
+    alert("<%= alertMessage %>");
 </script>
 <%
     }

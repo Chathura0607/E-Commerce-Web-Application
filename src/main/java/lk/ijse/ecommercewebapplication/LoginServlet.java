@@ -149,7 +149,7 @@ public class LoginServlet extends HttpServlet {
                         if (storedPassword.equals(hashedPassword)) {
                             // Check if the role is Customer
                             if (!"Customer".equalsIgnoreCase(role)) {
-                                req.setAttribute("message", "Login Failed! Only customers are allowed to log in.");
+                                req.setAttribute("alertMessage", "Login Failed! Only customers are allowed to log in.");
                                 req.getRequestDispatcher("index.jsp").forward(req, resp);
                                 return;
                             }
@@ -165,25 +165,25 @@ public class LoginServlet extends HttpServlet {
                                 // Store the user in the session
                                 req.getSession().setAttribute("user", userDTO);
 
-                                req.setAttribute("message", "Login Success! Welcome, Customer.");
+                                req.setAttribute("alertMessage", "Login Success! Welcome, Customer.");
                                 req.getRequestDispatcher("products.jsp").forward(req, resp);
                             } else {
-                                req.setAttribute("message", "Login Failed! Your account is not active.");
+                                req.setAttribute("alertMessage", "Login Failed! Your account is not active.");
                                 req.getRequestDispatcher("index.jsp").forward(req, resp);
                             }
                         } else {
-                            req.setAttribute("message", "Login Failed! Incorrect password.");
+                            req.setAttribute("alertMessage", "Login Failed! Incorrect password.");
                             req.getRequestDispatcher("index.jsp").forward(req, resp);
                         }
                     } else {
-                        req.setAttribute("message", "Login Failed! Email not found.");
+                        req.setAttribute("alertMessage", "Login Failed! Email not found.");
                         req.getRequestDispatcher("index.jsp").forward(req, resp);
                     }
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            req.setAttribute("message", "An error occurred: " + e.getMessage());
+            req.setAttribute("alertMessage", "An error occurred: " + e.getMessage());
             req.getRequestDispatcher("index.jsp").forward(req, resp);
         }
     }

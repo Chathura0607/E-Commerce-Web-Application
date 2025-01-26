@@ -42,7 +42,7 @@ public class RegisterServlet extends HttpServlet {
         // Hash the password
         String hashedPassword = hashPassword(userDTO.getPassword());
         if (hashedPassword == null) {
-            req.setAttribute("message", "Failed to hash the password. Please try again.");
+            req.setAttribute("alertMessage", "Failed to hash the password. Please try again.");
             req.getRequestDispatcher("index.jsp").forward(req, resp);
             return;
         }
@@ -63,14 +63,14 @@ public class RegisterServlet extends HttpServlet {
                 // Execute the query
                 int rowsAffected = preparedStatement.executeUpdate();
                 if (rowsAffected > 0) {
-                    req.setAttribute("message", "Registration successful! You can now log in.");
+                    req.setAttribute("alertMessage", "Registration successful! You can now log in.");
                 } else {
-                    req.setAttribute("message", "Registration failed. Please try again.");
+                    req.setAttribute("alertMessage", "Registration failed. Please try again.");
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            req.setAttribute("message", "An error occurred: " + e.getMessage());
+            req.setAttribute("alertMessage", "An error occurred: " + e.getMessage());
         }
 
         req.getRequestDispatcher("index.jsp").forward(req, resp);
