@@ -138,7 +138,9 @@
                 <li class="nav-item"><a class="nav-link" href="cart.jsp">Cart</a></li>
                 <li class="nav-item"><a class="nav-link" href="profile.jsp">Profile</a></li>
             </ul>
-            <button type="button" class="btn btn-primary btn-lg">Logout</button>
+            <form action="${pageContext.request.contextPath}/customer-logout" method="post" class="d-flex">
+                <button type="submit" class="btn btn-primary btn-lg">Logout</button>
+            </form>
         </div>
     </div>
 </nav>

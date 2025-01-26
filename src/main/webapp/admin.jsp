@@ -16,10 +16,10 @@
 
 <body>
 <div class="container">
-    <div class="ecommerce-text login">E-COMMERCE APPLICATION</div>
+    <div class="ecommerce-text login">ADMIN E-COMMERCE APPLICATION</div>
 
     <div id="login-form" class="form-box Login">
-        <h2>Login</h2>
+        <h2>Admin Login</h2>
         <form action="admin-login" method="post">
             <div class="input-box">
                 <input type="email" id="login-email" name="email" required/>
@@ -37,7 +37,7 @@
     </div>
 
     <div id="register-form" class="form-box Register">
-        <h2>Register</h2>
+        <h2>Admin Register</h2>
         <form action="admin-register" method="post">
             <div class="input-box">
                 <input type="text" id="register-name" name="name" required/>
