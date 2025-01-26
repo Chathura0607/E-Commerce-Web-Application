@@ -165,8 +165,11 @@ public class LoginServlet extends HttpServlet {
                                 // Store the user in the session
                                 req.getSession().setAttribute("user", userDTO);
 
+                                // Redirect to the products page directly
+                                resp.sendRedirect("http://localhost:8080/E_CommerceWebApplication_war_exploded/products");
+
                                 req.setAttribute("alertMessage", "Login Success! Welcome, Customer.");
-                                req.getRequestDispatcher("products.jsp").forward(req, resp);
+//                                req.getRequestDispatcher("products.jsp").forward(req, resp);
                             } else {
                                 req.setAttribute("alertMessage", "Login Failed! Your account is not active.");
                                 req.getRequestDispatcher("index.jsp").forward(req, resp);
