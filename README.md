@@ -44,8 +44,8 @@ An elegant and user-friendly E-Commerce platform built using **JSP**, **CSS**, *
 ### 🏠 Customer Login  
 ![Image](https://github.com/user-attachments/assets/ca86f864-d17b-4321-89f8-7cb458634677)  
 
-### 🛍️ Product List  
-![Product List](path/to/productlist_screenshot.png)  
+### 🛍️ Customer Register  
+![Image](https://github.com/user-attachments/assets/ed8d4a00-408d-40b7-9e13-5704465346e1)
 
 ### 🛒 Shopping Cart  
 ![Shopping Cart](path/to/cart_screenshot.png)  
