@@ -68,9 +68,7 @@ An elegant and user-friendly E-Commerce platform built using **JSP**, **CSS**, *
 
 ## 🎥 Demonstration Video  
 
-Watch a full walkthrough of the application on [YouTube](https://www.youtube.com/watch?v=YourVideoID).  
-
-> Replace `https://www.youtube.com/watch?v=YourVideoID` with your video link.  
+Watch a full walkthrough of the application on [YouTube](https://youtu.be/crTQp3EnNNA).  
 
 ---
 
